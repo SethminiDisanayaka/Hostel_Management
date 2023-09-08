@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="required">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/hms/lib/AnimateFX-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/hms/lib/jfoenix-8.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lk/ijse/hms/lib/mysql-connector-java-8.0.11.jar!/" />
+      <root url="file://$PROJECT_DIR$/src/lk/ijse/hms/lib/required" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/src/lk/ijse/hms/lib/required" recursive="false" />
+  </library>
+</component>
