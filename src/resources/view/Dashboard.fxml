@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="556.0" prefWidth="762.0" style="-fx-background-color: #a6deb5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hms.controller.DashboardController">
+<AnchorPane fx:id="pane" prefHeight="556.0" prefWidth="762.0" style="-fx-background-color: #a6deb5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hms.controller.DashboardController">
    <children>
       <Label layoutX="105.0" layoutY="47.0" prefHeight="36.0" prefWidth="550.0" text="D24 Hostel Management System">
          <font>
