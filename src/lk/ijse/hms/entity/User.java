@@ -1,8 +1,3 @@
-/*
- * Kasun Miuranga
- * Copyright (c) 2023
- */
-
 package lk.ijse.hms.entity;
 
 import lombok.AllArgsConstructor;
