@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="pane" prefHeight="556.0" prefWidth="762.0" style="-fx-background-color: #a6deb5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hms.controller.StudentController">
+   <children>
+      <Label layoutX="190.0" layoutY="42.0" prefHeight="36.0" prefWidth="349.0" text="Student Management">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="151.0" text="ID">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="192.0" text="Name">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="230.0" text="Address">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="349.0" text="Gender">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="309.0" text="DOB">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="269.0" text="Contact">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtID" layoutX="134.0" layoutY="148.0" />
+      <TextField fx:id="txtName" layoutX="134.0" layoutY="188.0" />
+      <TextField fx:id="txtAddress" layoutX="134.0" layoutY="225.0" />
+      <TextField fx:id="txtContact" layoutX="134.0" layoutY="264.0" />
+      <TextField layoutX="134.0" layoutY="303.0" />
+      <TableView fx:id="tblStudent" layoutX="293.0" layoutY="132.0" prefHeight="338.0" prefWidth="455.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="75.0" text="Contact" />
+            <TableColumn fx:id="colDOB" prefWidth="75.0" text="DOB" />
+            <TableColumn fx:id="colGender" prefWidth="75.0" text="Gender" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="rbMale" layoutX="140.0" layoutY="350.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbFemale" layoutX="218.0" layoutY="349.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+      <Button fx:id="btnNew" layoutX="36.0" layoutY="92.0" mnemonicParsing="false" onAction="#btnNewOnAction" text="New">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEdit" layoutX="156.0" layoutY="93.0" mnemonicParsing="false" onAction="#btnEditOnAction" text="Edit">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSave" layoutX="33.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnSaveOnAction" text="Save">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="187.0" layoutY="411.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" text="Delete">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancel" layoutX="100.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnCancelOnAction" text="Cancel">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="38.0" layoutY="478.0" mnemonicParsing="false" onAction="#btnBackOnAction" text="Back">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="dateDOB" layoutX="133.0" layoutY="303.0" prefHeight="26.0" prefWidth="156.0" />
+      <Label layoutX="305.0" layoutY="102.0" text="Seach" />
+      <TextField fx:id="txtSearch" layoutX="360.0" layoutY="98.0" />
+   </children>
+</AnchorPane>
