@@ -2,9 +2,7 @@ package lk.ijse.hms.dao;
 
 import java.util.ArrayList;
 
-public interface CrudDAO<T> extends SuperDAO{
-    // facade -	Gathering most common methods into a single interface to improve code re-usability
-
+public interface CrudDAO<T> {
     public ArrayList<T> getData();
 
     public boolean delete(String id);

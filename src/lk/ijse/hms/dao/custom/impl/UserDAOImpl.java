@@ -1,14 +1,10 @@
-/*
- * Kasun Miuranga
- * Copyright (c) 2023
- */
-
 package lk.ijse.hms.dao.custom.impl;
 
 import lk.ijse.hms.dao.custom.UserDAO;
 import lk.ijse.hms.entity.User;
 import lk.ijse.hms.util.SessionFactoryConfig;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import java.util.ArrayList;

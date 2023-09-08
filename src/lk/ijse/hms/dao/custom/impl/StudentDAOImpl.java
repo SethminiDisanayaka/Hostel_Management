@@ -6,7 +6,6 @@ import lk.ijse.hms.util.SessionFactoryConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,27 +69,27 @@ public class StudentDAOImpl implements StudentDAO{
         Session session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
-       // session.createQuery("FROM employee ORDER BY CAST(SUBSTRING(EmpID, 2) AS UNSIGNED) DESC LIMIT 1");
-      try{
-          String sql = "SELECT * FROM student ORDER BY CAST(SUBSTRING(id, 2) AS UNSIGNED) DESC LIMIT 1";
-          NativeQuery sqlQuery = session.createSQLQuery(sql);
+        // session.createQuery("FROM employee ORDER BY CAST(SUBSTRING(EmpID, 2) AS UNSIGNED) DESC LIMIT 1");
+        try{
+            String sql = "SELECT * FROM student ORDER BY CAST(SUBSTRING(id, 2) AS UNSIGNED) DESC LIMIT 1";
+            NativeQuery sqlQuery = session.createSQLQuery(sql);
 
-          sqlQuery.addEntity(Student.class);
+            sqlQuery.addEntity(Student.class);
 
-          List <Student> studentList = sqlQuery.list();
-          String id = null;
-          for(Student student : studentList){
-              id = student.getId();
-          }
-          transaction.commit();
-          session.close();
-          return id;
+            List <Student> studentList = sqlQuery.list();
+            String id = null;
+            for(Student student : studentList){
+                id = student.getId();
+            }
+            transaction.commit();
+            session.close();
+            return id;
 
-      }catch (Exception e){
-          transaction.commit();
-          session.close();
-          return null;
-      }
+        }catch (Exception e){
+            transaction.commit();
+            session.close();
+            return null;
+        }
     }
 
     @Override
