@@ -3,18 +3,13 @@ package lk.ijse.hms.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 
-public class StudentController {
+public class RoomController {
 
-    @FXML
-    public TextField txtSearch;
     @FXML
     private Button btnCancel;
 
@@ -31,52 +26,37 @@ public class StudentController {
     private Button btnSave;
 
     @FXML
-    private TableColumn<?, ?> colAddress;
+    private TableColumn<?, ?> colKeyMoney;
 
     @FXML
-    private TableColumn<?, ?> colContact;
+    private TableColumn<?, ?> colQty;
 
     @FXML
-    private TableColumn<?, ?> colDOB;
+    private TableColumn<?, ?> colRoomTypeID;
 
     @FXML
-    private TableColumn<?, ?> colGender;
-
-    @FXML
-    private TableColumn<?, ?> colID;
-
-    @FXML
-    private TableColumn<?, ?> colName;
-
-    @FXML
-    private DatePicker dateDOB;
-
-    @FXML
-    private ToggleGroup gender;
+    private TableColumn<?, ?> colType;
 
     @FXML
     private AnchorPane pane;
 
     @FXML
-    private RadioButton rbFemale;
-
-    @FXML
-    private RadioButton rbMale;
-
-    @FXML
     private TableView<?> tblStudent;
 
     @FXML
-    private TextField txtAddress;
+    private TextField txtKeyMoney;
 
     @FXML
-    private TextField txtContact;
+    private TextField txtQty;
 
     @FXML
-    private TextField txtID;
+    private TextField txtRoomTypeID;
 
     @FXML
-    private TextField txtName;
+    private TextField txtSearch;
+
+    @FXML
+    private TextField txtType;
 
     @FXML
     void btnBackOnAction(ActionEvent event) {

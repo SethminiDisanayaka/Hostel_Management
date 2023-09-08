@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="556.0" prefWidth="762.0" style="-fx-background-color: #a6deb5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hms.controller.RoomController">
+   <children>
+      <Label layoutX="198.0" layoutY="28.0" prefHeight="36.0" prefWidth="349.0" text="Room Management">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="151.0" text="ID">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="200.0" text="Type">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="251.0" text="Key Money">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="306.0" text="QTY">
+         <font>
+            <Font name="Bodoni MT" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtRoomTypeID" layoutX="134.0" layoutY="148.0" />
+      <TextField fx:id="txtType" layoutX="134.0" layoutY="196.0" />
+      <TextField fx:id="txtKeyMoney" layoutX="134.0" layoutY="247.0" />
+      <TextField fx:id="txtQty" layoutX="134.0" layoutY="300.0" />
+      <TableView fx:id="tblStudent" layoutX="293.0" layoutY="141.0" prefHeight="338.0" prefWidth="455.0">
+         <columns>
+            <TableColumn fx:id="colRoomTypeID" prefWidth="88.0" text="ID" />
+            <TableColumn fx:id="colType" prefWidth="116.0" text="Type" />
+            <TableColumn fx:id="colKeyMoney" prefWidth="122.4000244140625" text="Key Money" />
+            <TableColumn fx:id="colQty" prefWidth="160.0" text="Qty" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnNew" layoutX="36.0" layoutY="92.0" mnemonicParsing="false" onAction="#btnNewOnAction" text="New">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEdit" layoutX="156.0" layoutY="93.0" mnemonicParsing="false" onAction="#btnEditOnAction" text="Edit">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSave" layoutX="33.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnSaveOnAction" text="Save">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="187.0" layoutY="411.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" text="Delete">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancel" layoutX="100.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnCancelOnAction" text="Cancel">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="38.0" layoutY="478.0" mnemonicParsing="false" onAction="#btnBackOnAction" text="Back">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="315.0" layoutY="106.0" text="Seach" />
+      <TextField fx:id="txtSearch" layoutX="370.0" layoutY="100.0" />
+   </children>
+</AnchorPane>
