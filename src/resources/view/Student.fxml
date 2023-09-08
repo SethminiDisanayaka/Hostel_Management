@@ -101,7 +101,7 @@
          </font>
       </Button>
       <DatePicker fx:id="dateDOB" layoutX="133.0" layoutY="303.0" prefHeight="26.0" prefWidth="156.0" />
-      <Label layoutX="305.0" layoutY="102.0" text="Secrch" />
+      <Label layoutX="305.0" layoutY="102.0" text="Seach" />
       <TextField fx:id="txtSearch" layoutX="360.0" layoutY="98.0" />
    </children>
 </AnchorPane>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="556.0" prefWidth="762.0" style="-fx-background-color: #a6deb5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hms.controller.ReservationController">
+   <children>
+      <Label layoutX="181.0" layoutY="21.0" prefHeight="36.0" prefWidth="402.0" text="Reservation Management">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="reservationDetailsPane" layoutX="6.0" layoutY="69.0" prefHeight="224.0" prefWidth="750.0" style="-fx-background-color: #3b6e49;">
+         <children>
+            <TableView fx:id="tblReservation" layoutX="3.0" layoutY="22.0" prefHeight="200.0" prefWidth="643.0">
+              <columns>
+                <TableColumn fx:id="colResID" prefWidth="64.80002117156982" text="Res_ID" />
+                  <TableColumn fx:id="colResDate" prefWidth="76.79995727539062" text="Res_Date" />
+                  <TableColumn fx:id="colRoomTypeIDRes" prefWidth="76.79998779296875" text="Room_ID" />
+                  <TableColumn fx:id="colRoomTypeRes" prefWidth="83.99998474121094" text="Room_Type" />
+                  <TableColumn fx:id="colStudentIDRes" prefWidth="75.0" text="Student_id" />
+                  <TableColumn fx:id="colStdNameRes" prefWidth="91.20001220703125" text="Student_Name" />
+                  <TableColumn fx:id="colKeyMoneyRes" prefWidth="73.5999755859375" text="Key Money" />
+                  <TableColumn fx:id="colPaymentStatus" prefWidth="99.19989013671875" text="Payment_Status" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtSearchReservation" layoutX="59.0" layoutY="-6.0" prefHeight="6.0" prefWidth="150.0" />
+            <RadioButton fx:id="rbAll" layoutX="657.0" layoutY="54.0" mnemonicParsing="false" selected="true" text="All" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="FilterPayment" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbPending" layoutX="656.0" layoutY="79.0" mnemonicParsing="false" text="Pending" textFill="WHITE" toggleGroup="$FilterPayment">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rbPaid" layoutX="657.0" layoutY="104.0" mnemonicParsing="false" text="Paid" textFill="WHITE" toggleGroup="$FilterPayment">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="661.0" layoutY="28.0" text="Payment By" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnNew" layoutX="663.0" layoutY="137.0" mnemonicParsing="false" onAction="#btnNewOnAction" text="New" />
+            <Button fx:id="btnEdit" layoutX="663.0" layoutY="176.0" mnemonicParsing="false" onAction="#btnEditOnAction" text="Edit" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="newReservationPane" layoutX="6.0" layoutY="304.0" prefHeight="238.0" prefWidth="750.0" style="-fx-background-color: #3b6e49;">
+         <children>
+            <Label layoutX="10.0" layoutY="8.0" text="New Reservation" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblStudent" layoutX="14.0" layoutY="69.0" prefHeight="143.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="colStdID" prefWidth="75.0" text="Student ID" />
+                <TableColumn fx:id="colStdName" prefWidth="123.99998474121094" text="Student Name" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tblRooms" layoutX="226.0" layoutY="69.0" prefHeight="143.0" prefWidth="298.0">
+               <columns>
+                  <TableColumn fx:id="colRoomTypeID" prefWidth="75.0" text="Room ID" />
+                  <TableColumn fx:id="colType" prefWidth="91.20001220703125" text="Type" />
+                  <TableColumn fx:id="colKeyMoney" prefWidth="79.20001220703125" text="Key Money" />
+                  <TableColumn fx:id="colQty" prefWidth="50.39999999999998" text="Qty" />
+               </columns>
+            </TableView>
+            <Label layoutX="17.0" layoutY="41.0" text="Search Student" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSearchStudent" layoutX="101.0" layoutY="36.0" prefHeight="26.0" prefWidth="110.0" />
+            <Label layoutX="230.0" layoutY="42.0" text="Search Room" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSearchRoom" layoutX="311.0" layoutY="36.0" prefHeight="26.0" prefWidth="110.0" />
+            <Label layoutX="532.0" layoutY="28.0" text="Res.ID" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="533.0" layoutY="58.0" text="Room.ID" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="530.0" layoutY="90.0" text="Student.ID" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="534.0" layoutY="121.0" text="Res.Date" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtResID" layoutX="588.0" layoutY="22.0" />
+            <TextField fx:id="txtRoomID" layoutX="588.0" layoutY="52.0" />
+            <TextField fx:id="txtStudentID" layoutX="588.0" layoutY="82.0" />
+            <TextField layoutX="588.0" layoutY="113.0" />
+            <RadioButton fx:id="rbPaid1" layoutX="589.0" layoutY="154.0" mnemonicParsing="false" text="Paid" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="PaymentStatus" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbPending1" layoutX="651.0" layoutY="153.0" mnemonicParsing="false" text="Pending" textFill="WHITE" toggleGroup="$PaymentStatus">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <DatePicker fx:id="dateDate" layoutX="588.0" layoutY="113.0" prefHeight="26.0" prefWidth="150.0" />
+            <Button fx:id="btnReserve" layoutX="536.0" layoutY="186.0" mnemonicParsing="false" onAction="#btnReserveOnAction" text="Reserve" />
+            <Button fx:id="btnCancel" layoutX="604.0" layoutY="186.0" mnemonicParsing="false" onAction="#btnCancelOnAction" text="Cancel" />
+            <Button fx:id="btnDelete" layoutX="671.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" text="Delete" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="540.0" layoutY="456.0" text="Status" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="71.0" text="Search " textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
