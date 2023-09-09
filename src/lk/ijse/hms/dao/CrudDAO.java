@@ -2,7 +2,7 @@ package lk.ijse.hms.dao;
 
 import java.util.ArrayList;
 
-public interface CrudDAO<T> {
+public interface CrudDAO<T> extends SuperDAO{
     public ArrayList<T> getData();
 
     public boolean delete(String id);

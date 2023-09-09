@@ -11,6 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 
 @Entity
+@Table(name = "student")
 public class Student {
     @Id
     private String id;

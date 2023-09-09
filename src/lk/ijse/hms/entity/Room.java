@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 
 @Entity
+@Table(name = "room")
 public class Room {
     @Id
     private String room_type_id;

@@ -21,7 +21,7 @@ public class SessionFactoryConfig {
 
         Properties properties = new Properties();
         try {
-            properties.load(ClassLoader.getSystemClassLoader().getResourceAsStream("hibernate.properties"));
+            properties.load(ClassLoader.getSystemClassLoader().getResourceAsStream("resources/hibernate.properties"));
         } catch (IOException e) {
             System.out.println("file not found");
         }

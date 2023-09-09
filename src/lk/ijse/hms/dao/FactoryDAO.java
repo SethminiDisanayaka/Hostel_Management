@@ -26,15 +26,15 @@ public class FactoryDAO {
     public SuperDAO getDAO(Types types) {
         switch (types) {
             case STUDENT:
-                return (SuperDAO) new StudentDAOImpl();
+                return new StudentDAOImpl();
             case ROOM:
-                return (SuperDAO) new RoomsDAOImpl();
+                return new RoomsDAOImpl();
             case RECEPTION:
-                return (SuperDAO) new ReservationDAOImpl();
+                return new ReservationDAOImpl();
             case JOIN_QUERY:
-                return (SuperDAO) new QueryDAOImpl();
+                return new QueryDAOImpl();
             case USER:
-                return (SuperDAO) new UserDAOImpl();
+                return new UserDAOImpl();
             default:
                 return null;
         }

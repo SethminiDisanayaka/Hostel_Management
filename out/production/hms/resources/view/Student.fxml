@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="pane" prefHeight="556.0" prefWidth="762.0" style="-fx-background-color: #a6deb5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hms.controller.StudentController">
    <children>
       <Label layoutX="190.0" layoutY="42.0" prefHeight="36.0" prefWidth="349.0" text="Student Management">
@@ -54,7 +53,7 @@
       <TextField fx:id="txtAddress" layoutX="134.0" layoutY="225.0" />
       <TextField fx:id="txtContact" layoutX="134.0" layoutY="264.0" />
       <TextField layoutX="134.0" layoutY="303.0" />
-      <TableView fx:id="tblStudent" layoutX="293.0" layoutY="132.0" prefHeight="338.0" prefWidth="455.0">
+      <TableView fx:id="tblStudent" layoutX="307.0" layoutY="132.0" prefHeight="338.0" prefWidth="455.0">
         <columns>
           <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
           <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
