@@ -10,7 +10,7 @@ import java.io.IOException;
 public class AppInitializer extends Application {
 
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/resources/view/Dashboard.fxml"))));
+        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/resources/view/LoginForm.fxml"))));
         primaryStage.show();
         primaryStage.setResizable(false);
         primaryStage.setY(0);

@@ -21,8 +21,7 @@ import java.io.IOException;
 
 public class LoginController {
 
-    @FXML
-    private ImageView imgPasswordView;
+
 
     @FXML
     private AnchorPane pane;
@@ -40,10 +39,6 @@ public class LoginController {
     private TextField txtUserName;
 
     UserBO userBO =(UserBO) BOFactory.getBoFactory().getBO(BOFactory.Type.USER);
-    @FXML
-    void forgotClickOnAction(ActionEvent event) {
-        new Alert(Alert.AlertType.INFORMATION,"Please contact Developer !\n0740113917").show();
-    }
 
     @FXML
         void loginClickOnAction(javafx.event.ActionEvent event) throws IOException {
@@ -65,11 +60,6 @@ public class LoginController {
                 txtUserName.clear();
                 txtPassword.clear();
             }
-    }
-
-    @FXML
-    void passwordFieldKeyTyped(ActionEvent event) {
-        shownPassword.textProperty().bind(Bindings.concat(txtPassword.getText()));
     }
 
     private boolean isCorrectUserName() {
@@ -101,5 +91,13 @@ public class LoginController {
             txtPassword.setVisible(true);
             toggleButton.setText("Show");
         }
+    }
+
+    public void passwordFieldKeyTyped(javafx.event.ActionEvent actionEvent) {
+        shownPassword.textProperty().bind(Bindings.concat(txtPassword.getText()));
+    }
+
+    public void forgotClickOnAction(javafx.event.ActionEvent actionEvent) {
+        new Alert(Alert.AlertType.INFORMATION,"Please contact Developer !\n0740113917").show();
     }
 }
