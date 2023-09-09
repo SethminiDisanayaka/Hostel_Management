@@ -39,7 +39,7 @@
       <TextField fx:id="txtType" layoutX="134.0" layoutY="196.0" />
       <TextField fx:id="txtKeyMoney" layoutX="134.0" layoutY="247.0" />
       <TextField fx:id="txtQty" layoutX="134.0" layoutY="300.0" />
-      <TableView fx:id="tblStudent" layoutX="293.0" layoutY="141.0" prefHeight="338.0" prefWidth="455.0">
+      <TableView fx:id="tblRooms" layoutX="293.0" layoutY="141.0" prefHeight="338.0" prefWidth="455.0">
          <columns>
             <TableColumn fx:id="colRoomTypeID" prefWidth="88.0" text="ID" />
             <TableColumn fx:id="colType" prefWidth="116.0" text="Type" />

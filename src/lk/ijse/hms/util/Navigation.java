@@ -31,7 +31,7 @@ public class Navigation {
                 break;
             case ROOMS:
                 window.setTitle("24D Hostel Management System | Rooms");
-                initUI("Rooms.fxml");
+                initUI("Room.fxml");
                 break;
             case RESERVATION:
                 window.setTitle("24D Hostel Management System | Reservation");
