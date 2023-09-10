@@ -28,6 +28,10 @@ import java.util.Optional;
 public class ReservationController {
 
     @FXML
+    private AnchorPane pane;
+    @FXML
+    public Button btnBack;
+    @FXML
     private ToggleGroup FilterPayment;
 
     @FXML
@@ -141,8 +145,6 @@ public class ReservationController {
     @FXML
     private TextField txtStudentID;
 
-    @FXML
-     private AnchorPane pane;
 
     ReservationBO reservationBO = (ReservationBO) BOFactory.getBoFactory().getBO(BOFactory.Type.RECEPTION);
 

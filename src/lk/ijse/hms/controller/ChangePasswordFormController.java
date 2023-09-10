@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 public class ChangePasswordFormController {
 
     @FXML
-    AnchorPane pane;
+     private AnchorPane pane;
     @FXML
     private Button btnconfirm;
 
