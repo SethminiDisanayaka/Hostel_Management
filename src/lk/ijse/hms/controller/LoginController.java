@@ -4,25 +4,22 @@ import animatefx.animation.FadeIn;
 import animatefx.animation.Shake;
 import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ToggleButton;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.hms.bo.BOFactory;
 import lk.ijse.hms.bo.custom.UserBO;
 import lk.ijse.hms.util.Navigation;
 import lk.ijse.hms.util.Routes;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Label;
 
-import javax.swing.text.html.ImageView;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class LoginController {
 
 
-
+    public ImageView imgPasswordView;
     @FXML
     private AnchorPane pane;
 
@@ -33,7 +30,7 @@ public class LoginController {
     private ToggleButton toggleButton;
 
     @FXML
-    private TextField txtPassword;
+    private PasswordField txtPassword;
 
     @FXML
     private TextField txtUserName;
@@ -85,11 +82,13 @@ public class LoginController {
             shownPassword.setVisible(true);
             shownPassword.textProperty().bind(Bindings.concat(txtPassword.getText()));
             toggleButton.setText("Hide");
+            imgPasswordView.setImage(new Image("resources/img/img.png"));
 
         }else{
             shownPassword.setVisible(false);
             txtPassword.setVisible(true);
             toggleButton.setText("Show");
+            imgPasswordView.setImage(new Image("resources/img/icons8-eye-24.png"));
         }
     }
 

@@ -62,7 +62,11 @@ public class ChangePasswordFormController {
     }
     @FXML
     void btnBackOnAction(ActionEvent event) throws IOException {
-        Navigation.navigate(Routes.DASHBOARD, pane);
+        if (pane != null) {
+            Navigation.navigate(Routes.DASHBOARD, pane);
+        } else {
+            System.out.println("Error: Pane is null");
+        }
     }
 
     @FXML

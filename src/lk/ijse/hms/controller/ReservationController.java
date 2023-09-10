@@ -17,7 +17,10 @@ import lk.ijse.hms.dto.RoomsDTO;
 import lk.ijse.hms.dto.StudentDTO;
 import lk.ijse.hms.entity.Room;
 import lk.ijse.hms.entity.Student;
+import lk.ijse.hms.util.Navigation;
+import lk.ijse.hms.util.Routes;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -137,6 +140,9 @@ public class ReservationController {
 
     @FXML
     private TextField txtStudentID;
+
+    @FXML
+     private AnchorPane pane;
 
     ReservationBO reservationBO = (ReservationBO) BOFactory.getBoFactory().getBO(BOFactory.Type.RECEPTION);
 
@@ -436,5 +442,9 @@ public class ReservationController {
             return "RS0" + id;
         }
         return "RS01";
+    }
+
+    public void btnBackOnAction(ActionEvent actionEvent) throws IOException {
+        Navigation.navigate(Routes.DASHBOARD, pane);
     }
 }
